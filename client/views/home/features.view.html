@@ -1,0 +1,139 @@
+<div class="container">
+    <section >
+        <div class="row" style="padding-bottom:30px;">
+            <div class="col-md-12 text-center">
+                <h2>Quick Overview Of Features</h2>
+            </div>
+        </div>
+        <!-- ROW END -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        Search Repo
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            Search Git Repo by providing Username or Author Name.
+                        </p>
+                        <p>
+                            Click on any repo name returned in results to view commit details
+                        </p>
+                    </div>
+                    <div class="panel-footer">
+                        <a href="#/search" class="btn btn-danger "> <i class="glyphicon glyphicon-flash"></i> CLICK HERE TO ACCESS NOW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        Commits Activity
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            Explore last year commits by week
+                        </p>
+                        <p>
+                            Click on Commits Activity from Explore Menu
+                        </p>
+                        <p>Disabled if no zero search performed till date
+
+                        </p>
+                    </div>
+                    <div class="panel-footer">
+                        <a ng-disabled="!user.recent_reponame" href="#/statistics/{{repo_url}}" class="btn btn-warning "> <i class="glyphicon glyphicon-flash"></i> CLICK HERE TO ACCESS NOW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        Commits Browser
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            View Upto 600 Commits of Repo selected in search flow
+                        </p>
+
+                        <p>Disabled if no zero search performed till date
+
+                        </p>
+                    </div>
+                    <div class="panel-footer">
+                        <a ng-disabled="!user.recent_reponame" href="#/commits" class="btn btn-success "> <i class="glyphicon glyphicon-flash"></i> CLICK HERE TO ACCESS NOW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ROW END -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        Commits Presenter
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            Dynamic View of Commits
+                        </p>
+                        <p>
+                            Choose commits from either Commit Browser or use Commits by SHA
+                        </p>
+                        <p> Disabled if no zero search performed till date
+
+                        </p>
+                    </div>
+                    <div class="panel-footer">
+                        <a ng-disabled="!user.recent_reponame" href="#/slidebuilder" class="btn btn-danger "> <i class="glyphicon glyphicon-flash"></i> CLICK HERE TO ACCESS NOW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        Search History
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            View previous repository search history
+                        </p>
+                        <p>
+                            Tracks your recent search criteria
+                        </p>
+                        <p>
+                            Click on Search History from Top navigation to see the results.
+                        </p>
+                    </div>
+                    <div class="panel-footer">
+                        <a  href="#/repohistory/" class="btn btn-warning "> <i class="glyphicon glyphicon-flash"></i> CLICK HERE TO ACCESS NOW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        Issues and Pull Dashboard
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            View top 100 issues by assignes and top 100 pull requests
+                        </p>
+                        <p>
+                            Click Explore Menu to access this feature
+                        </p>
+                        <p>Disabled if no zero search performed till date
+
+                        </p>
+                    </div>
+                    <div class="panel-footer">
+                        <a ng-disabled="!user.recent_reponame" href="#/issuesdashboard" class="btn btn-success "> <i class="glyphicon glyphicon-flash"></i> CLICK HERE TO ACCESS NOW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ROW END -->
+    </section>
+    <!-- SECTION END -->
+</div>
+<!-- CONATINER END -->

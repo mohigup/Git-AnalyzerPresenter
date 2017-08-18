@@ -1,0 +1,138 @@
+
+<!--<script>
+    $(function() {
+
+        $("#typed").typed({
+            // strings: ["Typed.js is a <strong>jQuery</strong> plugin.", "It <em>types</em> out sentences.", "And then deletes them.", "Try it out!"],
+            stringsElement: $('#typed-strings'),
+            typeSpeed: 30,
+
+        });
+    });
+
+</script>-->
+
+<div ng-if="!model.flag" class="animate-if">
+<div class="panel panel-primary">
+    <div class="panel-heading"><H4 class="slidesheader"> Enter Parent Commit SHA to See all child Commits for Repository: {{model.repo}}</H4></div>
+    <div class="panel-body">
+        <form class="form-horizontal" >
+            <div class="form-group">
+                <label for="sha" class="col-sm-3 control-label"><span class="pull-left"></span></label>
+                <div class="col-sm-6">
+                    <input ng-model="sha" type="text" class="form-control" id="sha" placeholder="Source SHA">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-6">
+                    <a  href="#/slidebuilder/{{sha}}/{{true}}"  class="btn btn-success btn-block" id="get-stats-button" >
+                        Click here to View
+                    </a>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+    </div>
+
+
+
+<!--<div id = "SB1" class="row" style="background-color:lavender;">
+    <div class="col-xs-12 ">
+<H4> Enter Parent Commit SHA to See Changes in Repository: {{model.repo}}</H4>
+
+
+        <input ng-model="sha" class="form-control"/>
+        &lt;!&ndash;<button ng-click="searchMovie(movieTitle)" class="btn btn-primary btn-block">&ndash;&gt;
+        &lt;!&ndash;Search&ndash;&gt;
+        &lt;!&ndash;</button>&ndash;&gt;
+        <a href="#/slidebuilder/{{sha}}" class="btn btn-primary btn-block">
+            Generate
+        </a>
+
+    </div>
+
+&lt;!&ndash;
+
+<div ng-repeat="comments in data2.split('\n')">
+
+
+</div>
+&ndash;&gt;
+
+</div>-->
+
+<div ng-if="!model.data && model.sha!=null" id="loader-gif">
+    <img src="img/squares.gif">
+</div>
+<br/>
+
+
+<div id = "SB2" ng-if="model.data" class="row2" style="background-color:lavender;">
+    <ol class="breadcrumb">
+        <div align="center" style="font-weight:800"> Found {{model.commitscount}} Child Commits </div>
+    </ol>
+    <nav>
+        <ul class="pager">
+            <li class="previous "><a ng-disabled='model.page ==0' type="button" class="btn btn-default"  ng-click="model.loadData(model.page - 1)"><span aria-hidden="true">&larr;</span> Previous</a></li>
+            <li class="next"><a ng-disabled='model.page == model.commitscount'type="button" class="btn btn-default"  ng-click="model.loadData(model.page + 1)">Next <span aria-hidden="true">&rarr;</span></a></li>
+        </ul>
+    </nav>
+    <div ng-repeat="d in model.data">
+    <div id ="SB21" class="col-xs-12">
+
+        <div id ="SB211" class="panel panel-default">
+            <div class="panel-heading">
+                <li>Commit message is <span style = 'font-weight: bold'>{{d.msg }}</span></li>
+                <li>File Modified is <span style = 'font-weight: bold'>{{d.filename}}</span></li>
+                <li>File Modified by <span style = 'font-weight: bold'>{{d.author}} on {{d.date | date:'medium'}}</span></li>
+            </div>
+            <div id ="SB2112_{{ $index }}" class="panel-body table-responsive" >
+
+               <!-- <span class="element" style="white-space:pre"></span>-->
+               <!-- <div id="typed-strings" ng-repeat="line in model.data.split('\n')">
+                    <p>{{line}}</p>
+                </div>-->
+                <!--<span class="element"></span>-->
+
+                <!--<div id="typed-strings">
+                    <p>Typed.js is a <strong>jQuery</strong> plugin.</p>
+                    <p>It <em>types</em> out sentences.</p>
+                </div>
+                <span id="typed"></span>-->
+                <div class="element_{{ $index }} " align ="left" style="white-space:pre"></div>
+
+            </div>
+        </div>
+    </div>
+        </div>
+</div>
+
+<!--
+<div ng-carousel ng-carousel-name="example-carousel2" >
+    <slidecontainer class="carousel-slides">
+        <slide class="carousel-example"> <span class="element" style="white-space:pre"></span></slide>
+        <slide class="carousel-example">Slide 2</slide>
+        <slide class="carousel-example">Slide 3</slide>
+        <slide class="carousel-example">Slide 4</slide>
+        <slide class="carousel-example">Slide 5</slide>
+        <slide class="carousel-example">Slide 6</slide>
+    </slidecontainer>
+    <div class="carousel-arrow carousel-arrow-left">
+        <button ng-click="Carousel.get('example-carousel2').previous()">back</button>
+    </div>
+    <div class="carousel-arrow carousel-arrow-right">
+        <button ng-click="Carousel.get('example-carousel2').next()">forth</button>
+    </div>
+</div>
+-->
+
+
+<!--
+
+<iframe width="400" height="400" marginheight="0" marginwidth="0" src="views/slides/slides_p.view..html">
+    Fallback text here for unsupporting browsers, of which there are scant few.
+</iframe>
+
+-->

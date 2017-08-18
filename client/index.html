@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="GitApp">
+<head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+    <title>GitViz</title>
+
+
+    <!------added for git relesedetails-->
+    <link rel="icon" href="img/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Custom CSS -->
+    <link href="css/full-slider.css" rel="stylesheet">
+
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.2.5.js"></script>-->
+
+
+    <!-- Bootstrap core CSS 1.11.3-->
+
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../client/js/typed.js" type="text/javascript"></script>
+    <!-----new added for highlsh ---->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+
+
+
+    <!-- Angular CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+
+    <!-- Angular route CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+
+    <!---slides -->
+    <link href="../client/css/angular-carousel.css" rel="stylesheet">
+    <link href="../client/css/angular-carousel.min.css" rel="stylesheet">
+    <link href="../client/css/carousel.css" rel="stylesheet">
+    <script src="../client/js/hammer.min.js"></script>
+    <script src="../client/js/angular-carousel.js"></script>
+
+
+
+    <!-- BOOTSTRAP CDN -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../client/css/dataTables.bootstrap.css" rel="stylesheet">
+    <!-- table -->
+
+    <script src="http://cdn.datatables.net/1.10.11/js/jquery.dataTables.js"></script>
+    <script src="../client/js/dataTables.bootstrap.js"></script>
+
+    <script type="text/javascript" src="js/bootstrap3-typeahead.js"></script>
+    <script type="text/javascript" src="js/bootstrap3-typeahead.min.js"></script>
+
+    <!-- D3-->
+    <link href="css/nv.d3.css" rel="stylesheet">
+    <script src="js/underscore.js"></script>
+   <!-- <script src="js/angular.js"></script>-->
+    <script src="js/d3.js"></script>
+    <script src="js/nv.d3.js"></script>
+    <script src="js/angularjs-nvd3-directives.js"></script>
+
+
+
+    <!-- register a app--->
+    <script src="app.js"></script>
+
+    <!--- newly modified services-->
+    <script src="services/user.service.client.js"></script>
+    <script src="services/git.service.client.js"></script>
+    <script src="services/form.service.client.js"></script>
+
+    <script src="views/header/header.controller.js"></script>
+    <script src="views/home/home.controller.js"></script>
+    <script src="views/home/features.controller.js"></script>
+    <script src="views/sidebar/sidebar.controller.js"></script>
+    <script src="views/admin/login.controller.js"></script>
+    <script src="views/admin/profile.controller.js"></script>
+    <script src="views/issues/issues.controller.js"></script>
+    <script src="views/users/register.controller.js"></script>
+
+    <script src="views/main/main.controller.js"></script>
+
+    <!----newly added controllers -->
+    <script src="views/search/search.controller.js"></script>
+    <script src="views/details/details.controller.js"></script>
+    <script src="views/slides/slides.controller.js"></script>
+    <script src="views/slides/commits.controller.js"></script>
+    <script src="views/users/repo.search.view.controller.js"></script>
+    <script src ="views/details/release.details.controller.js"></script>
+    <script src ="views/dashboard/issues.dashboard.controller.js"></script>
+    <script src ="views/dashboard/pulls.dashboard.controller.js"></script>
+    <script src = "views/contact/contact.controller.js"></script>
+
+    <!-- route config--->
+    <script src="config.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-sortable/0.13.4/sortable.js"></script>
+
+    <!-- server offered services -->
+    <!-- <script src="../server/services/form.service.server.js"></script>
+ -->
+    <!-- Custom styles for this template -->
+
+    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="../client/css/animation.css" rel="stylesheet">
+    <link href="../client/css/one-page-wonder.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]>
+    <script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="http://getbootstrap.com/assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body ng-controller="MainController">
+
+<!--header section-->
+<div ng-controller="HeaderController" ng-include src="'views/header/header.view.html'">
+</div>
+
+<div class="container-fluid">
+    <div class="main">
+        <!--side bar div-->
+       <!-- <div ng-controller="SidebarController" ng-include src="'views/sidebar/sidebar.view.html'">
+
+        </div>-->
+        <!--<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">-->
+
+            <div ng-view>
+
+            </div>
+       <!-- </div>-->
+    </div>
+</div>
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+<script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery-1.12.0.min.js"><\/script>')</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</body>
+</html>
